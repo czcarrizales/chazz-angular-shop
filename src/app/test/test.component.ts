@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'test',
-  template: `Testing writing html in a template instead of a url.`,
+  template: `<p>Testing writing html in a template instead of a url.</p>`,
   styles: [`
   p {
     color: red;
