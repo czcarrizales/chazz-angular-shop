@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { TestCliComponent } from './test-cli/test-cli.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { SpellsComponent } from './spells/spells.component';
@@ -17,8 +15,6 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    TestCliComponent,
     HeaderComponent,
     SpellsComponent,
     SpellListComponent,
