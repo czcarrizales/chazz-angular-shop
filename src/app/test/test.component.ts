@@ -13,7 +13,14 @@ export class TestComponent {
   changingText = ''
   username = ''
   canBeSeen = false;
+  cavalryHere = false;
+  clicks: any[] = []
   enemies = ['Joe', 'Moe', 'Zoe']
+
+  showCavalry() {
+    this.cavalryHere = !this.cavalryHere
+    this.clicks.push('cavalry call!')
+  }
 
   getColor() {
     return this.canBeSeen ? 'red' : 'green'

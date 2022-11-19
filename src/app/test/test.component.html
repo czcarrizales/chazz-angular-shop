@@ -21,3 +21,9 @@ My name is {{name}}
 <p [ngClass]="{fearful: canBeSeen === true, calm: canBeSeen === false}" [ngStyle]="{color: getColor()}">ENEMY FEAR RATE</p>
 <br>
 <div *ngFor="let enemy of enemies">{{enemy}}</div>
+<br>
+<button (click)="showCavalry()">Cavalry!</button>
+<p *ngIf="cavalryHere">Cavalry is here!</p>
+<div [ngClass]="{'fearful': click > 4}" *ngFor="let click of clicks">
+    {{click}}
+</div>
