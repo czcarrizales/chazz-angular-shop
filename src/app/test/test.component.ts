@@ -12,6 +12,11 @@ export class TestComponent {
   eventTest = ''
   changingText = ''
   username = ''
+  canBeSeen = false;
+
+  look() {
+    this.canBeSeen = !this.canBeSeen
+  }
 
   buttonClick() {
     this.match = !this.match

@@ -11,3 +11,6 @@ My name is {{name}}
 <input type="text" [(ngModel)]="username">
 {{username}}
 <button [disabled]="username === ''" (click)="resetName()">Reset</button>
+<br>
+<button (click)="look()">Look!</button>
+<p *ngIf="canBeSeen">You can see me!</p>
