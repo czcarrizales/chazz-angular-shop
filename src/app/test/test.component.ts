@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TestComponent {
   name = 'Chazz'
+  match = false
+
+  buttonClick() {
+    this.match = !this.match
+  }
 }
