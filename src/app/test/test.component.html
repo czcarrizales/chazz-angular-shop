@@ -24,6 +24,6 @@ My name is {{name}}
 <br>
 <button (click)="showCavalry()">Cavalry!</button>
 <p *ngIf="cavalryHere">Cavalry is here!</p>
-<div [ngClass]="{'fearful': click > 4}" *ngFor="let click of clicks">
+<div [ngClass]="{'fearful': i > 4}" *ngFor="let click of clicks; let i = index">
     {{click}}
 </div>
