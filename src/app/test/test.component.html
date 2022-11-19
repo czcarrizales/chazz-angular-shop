@@ -19,3 +19,5 @@ My name is {{name}}
 </ng-template>
 <br>
 <p [ngClass]="{fearful: canBeSeen === true, calm: canBeSeen === false}" [ngStyle]="{color: getColor()}">ENEMY FEAR RATE</p>
+<br>
+<div *ngFor="let enemy of enemies">{{enemy}}</div>

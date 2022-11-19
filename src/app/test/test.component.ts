@@ -13,6 +13,7 @@ export class TestComponent {
   changingText = ''
   username = ''
   canBeSeen = false;
+  enemies = ['Joe', 'Moe', 'Zoe']
 
   getColor() {
     return this.canBeSeen ? 'red' : 'green'
