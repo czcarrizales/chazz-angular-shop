@@ -4,4 +4,6 @@ My name is {{name}}
     press
 </button>
 <p [innerText]="title"></p>
+<input (input)="onTextChange($event)">
+{{eventTest}}
 {{match}}
