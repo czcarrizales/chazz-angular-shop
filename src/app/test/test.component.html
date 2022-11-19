@@ -18,4 +18,4 @@ My name is {{name}}
     <p>Where did they go?</p>
 </ng-template>
 <br>
-<h1 [ngStyle]="{color: getColor()}">ENEMY FEAR RATE</h1>
+<p [ngClass]="{fearful: canBeSeen === true, calm: canBeSeen === false}" [ngStyle]="{color: getColor()}">ENEMY FEAR RATE</p>
