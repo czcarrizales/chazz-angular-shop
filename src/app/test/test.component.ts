@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class TestComponent {
   name = 'Chazz'
   match = false
+  title = 'Property Binding Test'
 
   buttonClick() {
     this.match = !this.match
