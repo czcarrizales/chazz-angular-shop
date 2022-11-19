@@ -14,6 +14,10 @@ export class TestComponent {
   username = ''
   canBeSeen = false;
 
+  getColor() {
+    return this.canBeSeen ? 'red' : 'green'
+  }
+
   look() {
     this.canBeSeen = !this.canBeSeen
   }
