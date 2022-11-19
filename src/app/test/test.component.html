@@ -5,5 +5,9 @@ My name is {{name}}
 </button>
 <p [innerText]="title"></p>
 <input (input)="onTextChange($event)">
+<input type="text" [(ngModel)]="changingText">
 {{eventTest}}
 {{match}}
+<input type="text" [(ngModel)]="username">
+{{username}}
+<button [disabled]="username === ''" (click)="resetName()">Reset</button>
