@@ -13,4 +13,7 @@ My name is {{name}}
 <button [disabled]="username === ''" (click)="resetName()">Reset</button>
 <br>
 <button (click)="look()">Look!</button>
-<p *ngIf="canBeSeen">You can see me!</p>
+<p *ngIf="canBeSeen; else cannotBeSeen">You can see me!</p>
+<ng-template #cannotBeSeen>
+    <p>Where did they go?</p>
+</ng-template>
