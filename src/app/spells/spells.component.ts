@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-spells',
@@ -9,10 +9,15 @@ export class SpellsComponent implements OnInit {
 
   @Input() inputTest!: string;
   @Input() hiddenEgg!: string;
+  @Output() newFireworkEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  displayFirework(value: string) {
+    this.newFireworkEvent.emit(value)
   }
 
 }

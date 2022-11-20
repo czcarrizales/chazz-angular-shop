@@ -2,7 +2,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-spells *ngFor="let test of testSpells" [inputTest]="test" [hiddenEgg]="parentEgg"></app-spells>
+            <app-spells *ngFor="let test of testSpells" [inputTest]="test" [hiddenEgg]="parentEgg" (newFireworkEvent)="addFirework($event)"></app-spells>
+            <ul>
+                <li *ngFor="let firework of fireworks">{{firework}}</li>
+            </ul>
             <app-shopping-list></app-shopping-list>
         </div>
     </div>
