@@ -1,1 +1,19 @@
-<p>spell-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Spell</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{spells[0].name}}</h4>
+                <p class="list-group-item-text">{{spells[0].description}}</p>
+                <span class="pull-right">
+                    <img src="" alt="" class="img-responsive" style="max-height: 50px;">
+                </span>
+            </div>
+        </a>
+        <app-spell-item></app-spell-item>
+    </div>
+</div>
