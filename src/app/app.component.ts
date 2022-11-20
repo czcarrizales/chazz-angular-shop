@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'chazz-angular-shop';
   testSpells = ['hello', 'goodbye']
+  parentEgg = 'Spiked Dragon Egg'
 }

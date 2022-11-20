@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SpellsComponent implements OnInit {
 
   @Input() inputTest!: string;
+  @Input() hiddenEgg!: string;
 
   constructor() { }
 

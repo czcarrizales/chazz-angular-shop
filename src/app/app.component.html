@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-spells *ngFor="let test of testSpells" [inputTest]="test"></app-spells>
+            <app-spells *ngFor="let test of testSpells" [inputTest]="test" [hiddenEgg]="parentEgg"></app-spells>
             <app-shopping-list></app-shopping-list>
         </div>
     </div>
