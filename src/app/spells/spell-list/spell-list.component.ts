@@ -9,7 +9,7 @@ import { Spell } from '../spell.model';
 export class SpellListComponent implements OnInit {
 
   spells: Spell[] = [
-    new Spell('Fireball', 'Fire scorches their faces', '#')
+    new Spell('Fireball', 'Fire scorches their faces', 'https://www.pngkit.com/png/detail/942-9426503_fireball-boladefogo-fire-fogo-bola-ball-effect-fireball.png')
   ]
 
   constructor() { }
