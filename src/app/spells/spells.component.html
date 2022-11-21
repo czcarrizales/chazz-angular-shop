@@ -2,7 +2,7 @@
     <div class="col-md-5">
         <app-spell-list (spellItemToSpellEvent)="spellsGettingSpellItem($event)"></app-spell-list>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-7" appBasicHighlight>
         <app-spell-detail [spellPocket]="spellItemForSpellDetail"></app-spell-detail>
     </div>
 </div>
