@@ -10,6 +10,7 @@ export class SpellItemComponent implements OnInit {
   @Input() spell!: Spell;
   @Input() childStorage!: string;
   @Output() childThrowingBallEvent = new EventEmitter<string>();
+  ball = 'football'
 
   constructor() { }
 
@@ -17,7 +18,8 @@ export class SpellItemComponent implements OnInit {
   }
 
   throwBall() {
-    this.childThrowingBallEvent.emit('football')
+    alert('Hey, parent! I am your child, and I am throwing a ' + this.ball)
+    this.childThrowingBallEvent.emit(this.ball)
   }
 
 }
