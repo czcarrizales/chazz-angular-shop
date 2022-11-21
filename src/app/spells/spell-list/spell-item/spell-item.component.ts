@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Spell } from '../../spell.model';
 
 @Component({
@@ -9,10 +9,15 @@ import { Spell } from '../../spell.model';
 export class SpellItemComponent implements OnInit {
   @Input() spell!: Spell;
   @Input() childStorage!: string;
+  @Output() childThrowingBallEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  throwBall() {
+    this.childThrowingBallEvent.emit('football')
   }
 
 }

@@ -7,6 +7,6 @@
 <div class="row">
     <div class="col-xs-12">
         
-        <app-spell-item  *ngFor="let spellElement of spells" [spell]="spellElement" [childStorage]="parentGift"></app-spell-item>
+        <app-spell-item  *ngFor="let spellElement of spells" [spell]="spellElement" [childStorage]="parentGift" (childThrowingBallEvent)="parentCaughtChildBall($event)"></app-spell-item>
     </div>
 </div>
