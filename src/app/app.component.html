@@ -1,12 +1,9 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-spells *ngFor="let test of testSpells" [inputTest]="test" [hiddenEgg]="parentEgg" (newFireworkEvent)="addFirework($event)"></app-spells>
-            <ul>
-                <li *ngFor="let firework of fireworks">{{firework}}</li>
-            </ul>
-            <app-shopping-list></app-shopping-list>
+            <app-spells *ngIf="loadedFeature === 'spell'"></app-spells>
+            <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
         </div>
     </div>
 </div>
