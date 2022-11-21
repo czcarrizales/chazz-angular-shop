@@ -11,6 +11,9 @@ import { SpellDetailComponent } from './spells/spell-detail/spell-detail.compone
 import { SpellItemComponent } from './spells/spell-list/spell-item/spell-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { GamecontrolComponent } from './gamecontrol/gamecontrol.component';
+import { OddComponent } from './gamecontrol/odd/odd.component';
+import { EvenComponent } from './gamecontrol/even/even.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     SpellDetailComponent,
     SpellItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    GamecontrolComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
