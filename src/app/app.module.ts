@@ -14,6 +14,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { GamecontrolComponent } from './gamecontrol/gamecontrol.component';
 import { OddComponent } from './gamecontrol/odd/odd.component';
 import { EvenComponent } from './gamecontrol/even/even.component';
+import { BasicHighlightDirective } from './basic-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EvenComponent } from './gamecontrol/even/even.component';
     ShoppingEditComponent,
     GamecontrolComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
