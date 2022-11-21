@@ -12,6 +12,8 @@ export class SpellListComponent implements OnInit {
     new Spell('Fireball', 'Fire scorches their faces', 'https://www.pngkit.com/png/detail/942-9426503_fireball-boladefogo-fire-fogo-bola-ball-effect-fireball.png')
   ]
 
+  parentGift = 'Baseball'
+
   constructor() { }
 
   ngOnInit(): void {
