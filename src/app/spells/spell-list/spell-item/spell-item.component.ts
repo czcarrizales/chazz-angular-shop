@@ -11,10 +11,16 @@ export class SpellItemComponent implements OnInit {
   @Input() childStorage!: string;
   @Output() childThrowingBallEvent = new EventEmitter<string>();
   ball = 'football'
+  @Output() spellToParentEvent = new EventEmitter<Spell>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  spellItemClicked() {
+    alert('sending spell item to spell list')
+    this.spellToParentEvent.emit(this.spell)
   }
 
   throwBall() {
