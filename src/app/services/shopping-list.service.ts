@@ -1,15 +1,16 @@
 import { Ingredient } from '../shared/ingredient.model';
 
 export class ShoppingListService {
-  ingredients: Ingredient[] = [
+
+  private ingredients: Ingredient[] = [
     new Ingredient('Black Rose Petal', 5),
     new Ingredient('Explosive Powder Pellet', 2),
   ];
 
   getIngredients() {
-    return this.ingredients.slice()
+    return this.ingredients.slice();
   }
-  addIngredient() {
-    
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient)
   }
 }
