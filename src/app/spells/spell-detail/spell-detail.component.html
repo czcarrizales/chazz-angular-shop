@@ -27,6 +27,10 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        Ingredients for spell?
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ingredient of spellPocket.ingredients">
+                {{ingredient.name}} - {{ingredient.amount}}
+            </li>
+        </ul>
     </div>
 </div>
