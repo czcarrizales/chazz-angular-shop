@@ -5,22 +5,17 @@ import { Ingredient } from '../shared/ingredient.model';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.scss'],
-  providers: [ShoppingListService]
+  styleUrls: ['./shopping-list.component.scss']
 })
 export class ShoppingListComponent implements OnInit {
 
   ingredients: Ingredient[] = []
 
+
   constructor(private shoppingListService: ShoppingListService) { }
 
   ngOnInit(): void {
     this.ingredients = this.shoppingListService.getIngredients()
-    console.log(this.ingredients)
-  }
-
-  onIngredientAdded(ingredient: Ingredient) {
-    
   }
 
 }
