@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SpellService } from 'src/app/services/spell.service';
 import { Spell } from '../../spell.model';
 
 @Component({
@@ -11,16 +12,15 @@ export class SpellItemComponent implements OnInit {
   @Input() childStorage!: string;
   @Output() childThrowingBallEvent = new EventEmitter<string>();
   ball = 'football'
-  @Output() spellToParentEvent = new EventEmitter<Spell>();
 
-  constructor() { }
+  constructor(private spellService: SpellService) { }
 
   ngOnInit(): void {
   }
 
   spellItemClicked() {
-    alert('sending spell item to spell list')
-    this.spellToParentEvent.emit(this.spell)
+    // alert('sending spell item to spell list')
+    this.spellService.spellSelected.emit(this.spell)
   }
 
   throwBall() {
