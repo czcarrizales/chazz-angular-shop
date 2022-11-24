@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SpellService } from 'src/app/services/spell.service';
 import { Spell } from '../spell.model';
 
 @Component({
@@ -8,22 +9,14 @@ import { Spell } from '../spell.model';
 })
 export class SpellListComponent implements OnInit {
 
-  spells: Spell[] = [
-    new Spell('Fireball', 'Fire scorches their faces', 'https://www.pngkit.com/png/detail/942-9426503_fireball-boladefogo-fire-fogo-bola-ball-effect-fireball.png'),
-    new Spell('Lightning Bolt', 'Scar the blood between their veins with volts of electricity', 'https://helios-i.mashable.com/imagery/articles/03bDuXus9Lsnz9sUqURbDiB/hero-image.fill.size_1200x1200.v1643714839.jpg')
-  ]
+  spells!: Spell[];
 
   parentGift = 'Baseball gifted by the parent'
-  @Output() spellItemToSpellEvent = new EventEmitter<Spell>()
 
-  constructor() { }
+  constructor(private spellService: SpellService) { }
 
   ngOnInit(): void {
-  }
-
-  spellListGettingSpellItem(spellItem: Spell) {
-    alert('spell list caught the ' + spellItem.name)
-    this.spellItemToSpellEvent.emit(spellItem)
+    this.spells = this.spellService.getSpells()
   }
 
   parentCaughtChildBall(caughtItem: string) {
