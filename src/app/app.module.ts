@@ -16,6 +16,7 @@ import { OddComponent } from './gamecontrol/odd/odd.component';
 import { EvenComponent } from './gamecontrol/even/even.component';
 import { BasicHighlightDirective } from './basic-highlight.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingListService } from './services/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
