@@ -16,4 +16,8 @@ export class ShoppingListService {
     this.ingredients.push(ingredient)
     this.ingredientsChanged.emit(this.ingredients.slice())
   }
+  sendIngredientsToShoppingList(ingredient: Ingredient) {
+    this.ingredients.push(ingredient)
+    this.ingredientsChanged.emit(this.ingredients.slice())
+  }
 }
