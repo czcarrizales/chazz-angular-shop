@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl, AbstractControl, ValidatorFn } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormControl, AbstractControl, ValidatorFn, NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild('f') subscriptionForm!: NgForm
+  selectedSubscription = 'advanced'
   title = 'chazz-angular-shop';
   testSpells = ['hello', 'goodbye']
   parentEgg = 'Spiked Dragon Egg'
@@ -26,6 +28,10 @@ export class AppComponent {
 
   ngOnInit() {
     this.initializeForm()
+  }
+
+  subscriptionSubmit(value: any) {
+    console.log(value)
   }
 
   initializeForm() {

@@ -1,3 +1,20 @@
+<form  #subscriptionForm="ngForm" (ngSubmit)="subscriptionSubmit(subscriptionForm.value)">
+    <label>email:
+        <input type="email" name="email" ngModel required email>
+    </label>
+    <label>subscription:
+        <select name="subscription" [ngModel]="selectedSubscription">
+            <option value="basic">basic</option>
+            <option value="advanced">advanced</option>
+            <option value="pro">pro</option>
+        </select>
+    </label>
+    <label>password
+        <input type="password" name="password" ngModel required>
+    </label>
+    <button type="submit">Submit</button>
+</form>
+<hr style="background-color: red; height: 2px;">
 <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
   <label>Project Name
     <input type="text" formControlName="projectName">
@@ -15,7 +32,7 @@
   </select>
   <button type="submit">Submit</button>
 </form>
-<br>
+<hr style="background-color: red; height: 2px;">
 <app-header></app-header>
 <div class="container">
   <div class="row">

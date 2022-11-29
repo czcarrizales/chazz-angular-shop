@@ -41,6 +41,7 @@ import { SpellEditComponent } from './spells/spell-edit/spell-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [ShoppingListService],
