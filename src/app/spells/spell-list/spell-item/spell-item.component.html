@@ -1,11 +1,9 @@
-<a style="cursor: pointer" class="list-group-item clearfix" (click)="spellItemClicked()">
+<a [routerLink]="['/spells', spell.id]" routerLinkActive="active" style="cursor: pointer" class="list-group-item clearfix">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{spell.name}}</h4>
         <p class="list-group-item-text">{{spell.description}}</p>
         <span class="pull-right">
             <img [src]="spell.imagePath" alt="" class="img-responsive" style="max-height: 50px;">
         </span>
-        {{childStorage}}
-        <button (click)="throwBall()">Child throwing ball!</button>
     </div>
 </a>

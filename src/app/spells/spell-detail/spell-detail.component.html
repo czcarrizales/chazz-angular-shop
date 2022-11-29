@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs 12">
-    <img [src]="spellPocket.imagePath" alt="" class="img-responsive">
+    <img [src]="spellById.imagePath" alt="" class="img-responsive" style="max-height: 300px;">
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{spellPocket.name}}</h1>
+    <h1>{{spellById.name}}</h1>
   </div>
 </div>
 <div class="row">
@@ -14,7 +14,7 @@
             <button type="button" class="btn btn-primary dropdown-toggle">Manage Spell <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li><a (click)="addToShoppingList()" style="cursor: pointer;">To Shopping List</a></li>
-                <li><a style="cursor: pointer;">Edit Spell</a></li>
+                <li><a routerLink="edit" style="cursor: pointer;">Edit Spell</a></li>
                 <li><a style="cursor: pointer;">Delete Spell</a></li>
             </ul>
         </div>
@@ -22,13 +22,13 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        {{spellPocket.description}}
+        {{spellById.description}}
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let ingredient of spellPocket.ingredients">
+            <li class="list-group-item" *ngFor="let ingredient of spellById.ingredients">
                 {{ingredient.name}} - {{ingredient.amount}}
             </li>
         </ul>

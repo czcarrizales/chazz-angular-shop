@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormControl, AbstractControl, ValidatorFn } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +17,36 @@ export class AppComponent {
   evenNumbers: number[]= []
 
   loadedFeature = 'spell'
+  projectForm!: FormGroup
+  forbiddenProjectNames = ['Test']
 
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
+  constructor(private fb: FormBuilder) {
+
+  }
+
+  ngOnInit() {
+    this.initializeForm()
+  }
+
+  initializeForm() {
+    this.projectForm = this.fb.group({
+      projectName: ['', [Validators.required, this.forbiddenProjectNameCheck()]],
+      email: ['', [Validators.required, Validators.email]],
+      projectStatus: ''
+    })
+  }
+
+  onSubmit() {
+    console.log(this.projectForm)
+  }
+
+  forbiddenProjectNameCheck() : ValidatorFn {
+    return (control: AbstractControl): {[key: string]: boolean} | null => {
+      if (this.forbiddenProjectNames.includes(control.value)) {
+        return {'NameNotAllowed' : true}
+      }
+      return null
+    }
   }
 
   addOddOrEven(oddOrEven: number) {

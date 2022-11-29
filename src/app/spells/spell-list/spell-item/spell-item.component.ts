@@ -20,7 +20,7 @@ export class SpellItemComponent implements OnInit {
 
   spellItemClicked() {
     // alert('sending spell item to spell list')
-    this.spellService.spellSelected.emit(this.spell)
+    this.spellService.spellSelected.next(this.spell)
   }
 
   throwBall() {

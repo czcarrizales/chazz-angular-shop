@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { SpellsComponent } from './spells/spells.component';
 import { SpellListComponent } from './spells/spell-list/spell-list.component';
@@ -17,6 +17,8 @@ import { EvenComponent } from './gamecontrol/even/even.component';
 import { BasicHighlightDirective } from './basic-highlight.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './services/shopping-list.service';
+import { SpellStartComponent } from './spells/spell-start/spell-start.component';
+import { SpellEditComponent } from './spells/spell-edit/spell-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +34,14 @@ import { ShoppingListService } from './services/shopping-list.service';
     OddComponent,
     EvenComponent,
     BasicHighlightDirective,
-    DropdownDirective
+    DropdownDirective,
+    SpellStartComponent,
+    SpellEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
